@@ -19,11 +19,15 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+  <!-- 제목 글꼴(Hahmlet)은 제목에 쓴 글자만 잘라 직접 둔다. 제목을 고치면 scripts/subset-fonts.py를 다시 돌린다. -->
+  <link rel="preload" href="assets/fonts/hahmlet-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/hahmlet-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="modulepreload" href="assets/vendor/three-sky.min.js">
   <!-- styles.css·main.js·sky.js를 고치면 ?v= 뒤 값을 바꿔야 브라우저가 예전 파일을 쓰지 않아요. -->
-  <link rel="stylesheet" href="styles.css?v=20261109-5">
-  <script src="main.js?v=20261109-5" defer></script>
-  <script src="sky.js?v=20261109-5" type="module"></script>
+  <link rel="stylesheet" href="styles.css?v=20261109-6">
+  <script src="main.js?v=20261109-6" defer></script>
+  <script src="sky.js?v=20261109-6" type="module"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
@@ -112,7 +116,7 @@
 
         <article class="card card--feature" aria-labelledby="p-founder-map">
           <figure class="shot">
-            <img src="assets/shots/founder-map.jpg" width="1200" height="750" alt="founder-map 화면. 왼쪽에 마감순 공고 목록, 오른쪽에 시도별 공고 수와 기관 수가 표시된 한국 지도가 있다." loading="lazy" decoding="async">
+            <img src="assets/shots/founder-map.webp" srcset="assets/shots/founder-map-600.webp 600w, assets/shots/founder-map.webp 1200w" sizes="(max-width: 1023px) 92vw, 600px" width="1200" height="750" alt="founder-map 화면. 왼쪽에 마감순 공고 목록, 오른쪽에 시도별 공고 수와 기관 수가 표시된 한국 지도가 있다." loading="lazy" decoding="async">
             <span class="chip js-status" data-for="founder-map" data-state="ok">응답 52ms</span>
           </figure>
           <div class="card__body">
@@ -138,7 +142,7 @@
 
         <article class="card card--feature card--flip" aria-labelledby="p-daymap">
           <figure class="shot">
-            <img src="assets/shots/seoul-daymap.jpg" width="1200" height="750" alt="Seoul Daymap의 서울 별자리 일지 화면. 검은 밤하늘에 혼잡도에 따라 색이 다른 별들이 띠를 이루고, 아래에 ‘이태원을 둘러싼 9개의 별무리’라고 적혀 있다." loading="lazy" decoding="async">
+            <img src="assets/shots/seoul-daymap.webp" srcset="assets/shots/seoul-daymap-600.webp 600w, assets/shots/seoul-daymap.webp 1200w" sizes="(max-width: 1023px) 92vw, 600px" width="1200" height="750" alt="Seoul Daymap의 서울 별자리 일지 화면. 검은 밤하늘에 혼잡도에 따라 색이 다른 별들이 띠를 이루고, 아래에 ‘이태원을 둘러싼 9개의 별무리’라고 적혀 있다." loading="lazy" decoding="async">
             <span class="chip js-status" data-for="seoul-daymap" data-state="ok">응답 49ms</span>
           </figure>
           <div class="card__body">
@@ -165,7 +169,7 @@
 
         <article class="card card--feature" aria-labelledby="p-mh">
           <figure class="shot">
-            <img src="assets/shots/mentoring-hub.jpg" width="1200" height="750" alt="멘토링 허브 로그인 화면. 초록 구슬 모양 마스코트 아래 ‘MentoringHub — 광운대학교 멘토링 관리 시스템’과 Google 계정 로그인 버튼이 있다." loading="lazy" decoding="async">
+            <img src="assets/shots/mentoring-hub.webp" srcset="assets/shots/mentoring-hub-600.webp 600w, assets/shots/mentoring-hub.webp 1200w" sizes="(max-width: 1023px) 92vw, 600px" width="1200" height="750" alt="멘토링 허브 로그인 화면. 초록 구슬 모양 마스코트 아래 ‘MentoringHub — 광운대학교 멘토링 관리 시스템’과 Google 계정 로그인 버튼이 있다." loading="lazy" decoding="async">
             <span class="chip js-status" data-for="mentoring-hub" data-state="ok">응답 25ms</span>
           </figure>
           <div class="card__body">
@@ -192,7 +196,7 @@
         <div class="grid">
           <article class="card" aria-labelledby="p-plan-lint">
             <figure class="shot">
-              <img src="assets/shots/plan-lint.jpg" width="1200" height="750" alt="plan-lint 화면. ‘제출 전에, 계획서의 빈틈을 먼저 점검하세요’라는 제목 아래 파일 올리기 영역과 AI 정밀 검사 스위치가 있다." loading="lazy" decoding="async">
+              <img src="assets/shots/plan-lint.webp" srcset="assets/shots/plan-lint-600.webp 600w, assets/shots/plan-lint.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1023px) 46vw, 540px" width="1200" height="750" alt="plan-lint 화면. ‘제출 전에, 계획서의 빈틈을 먼저 점검하세요’라는 제목 아래 파일 올리기 영역과 AI 정밀 검사 스위치가 있다." loading="lazy" decoding="async">
               <span class="chip js-status" data-for="plan-lint" data-state="ok">응답 121ms</span>
             </figure>
             <div class="card__body">
@@ -218,7 +222,7 @@
 
           <article class="card" aria-labelledby="p-synth">
             <figure class="shot">
-              <img src="assets/shots/synth-persona.jpg" width="1200" height="750" alt="synth-persona 데모 화면. ‘진짜 고객을 만나기 전, 가짜 60명에게 먼저 물어보세요’라는 제목과 예시 리포트 카드 두 장이 있다." loading="lazy" decoding="async">
+              <img src="assets/shots/synth-persona.webp" srcset="assets/shots/synth-persona-600.webp 600w, assets/shots/synth-persona.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1023px) 46vw, 540px" width="1200" height="750" alt="synth-persona 데모 화면. ‘진짜 고객을 만나기 전, 가짜 60명에게 먼저 물어보세요’라는 제목과 예시 리포트 카드 두 장이 있다." loading="lazy" decoding="async">
               <span class="chip js-status" data-for="synth-persona" data-state="ok">응답 28ms</span>
             </figure>
             <div class="card__body">
@@ -243,7 +247,7 @@
 
           <article class="card" aria-labelledby="p-kw">
             <figure class="shot">
-              <img src="assets/shots/kw-startup-universe.jpg" width="1200" height="750" alt="KW Startup Universe 화면. 보랏빛 우주에 떠 있는 작은 3D 행성 위에 창업지원 센터 이름표와 ‘모집 중’ 표시가 붙어 있다." loading="lazy" decoding="async">
+              <img src="assets/shots/kw-startup-universe.webp" srcset="assets/shots/kw-startup-universe-600.webp 600w, assets/shots/kw-startup-universe.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1023px) 46vw, 540px" width="1200" height="750" alt="KW Startup Universe 화면. 보랏빛 우주에 떠 있는 작은 3D 행성 위에 창업지원 센터 이름표와 ‘모집 중’ 표시가 붙어 있다." loading="lazy" decoding="async">
               <span class="chip js-status" data-for="kw-startup-universe" data-state="ok">응답 36ms</span>
             </figure>
             <div class="card__body">
@@ -268,7 +272,7 @@
 
           <article class="card" aria-labelledby="p-modu">
             <figure class="shot">
-              <img src="assets/shots/modu-startup.jpg" width="1200" height="750" alt="모두의 창업 로그인 화면. 파란 구슬 모양 마스코트 아래 ‘모두의 창업 — 광운대학교 모두의 창업 관리 플랫폼’과 Google 계정 로그인 버튼이 있다." loading="lazy" decoding="async">
+              <img src="assets/shots/modu-startup.webp" srcset="assets/shots/modu-startup-600.webp 600w, assets/shots/modu-startup.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1023px) 46vw, 540px" width="1200" height="750" alt="모두의 창업 로그인 화면. 파란 구슬 모양 마스코트 아래 ‘모두의 창업 — 광운대학교 모두의 창업 관리 플랫폼’과 Google 계정 로그인 버튼이 있다." loading="lazy" decoding="async">
               <span class="chip js-status" data-for="modu-startup" data-state="ok">응답 22ms</span>
             </figure>
             <div class="card__body">
@@ -344,7 +348,7 @@
 
           <article class="card" aria-labelledby="p-gc">
             <figure class="shot">
-              <img src="assets/shots/grantcompass.jpg" width="1200" height="750" alt="GrantCompass Korea의 기관 검토대장 화면. 합성기업 상담 기록에 상담 단계, 담당자, 자동·유효 종합 판정, 검토 상태가 표로 나온다." loading="lazy" decoding="async">
+              <img src="assets/shots/grantcompass.webp" srcset="assets/shots/grantcompass-600.webp 600w, assets/shots/grantcompass.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1023px) 46vw, 540px" width="1200" height="750" alt="GrantCompass Korea의 기관 검토대장 화면. 합성기업 상담 기록에 상담 단계, 담당자, 자동·유효 종합 판정, 검토 상태가 표로 나온다." loading="lazy" decoding="async">
             </figure>
             <div class="card__body">
               <p class="card__kicker">근거를 남기는 지원사업 매칭</p>
@@ -379,7 +383,7 @@
 
         <article class="card card--feature" aria-labelledby="p-wave">
           <figure class="shot">
-            <img src="assets/shots/subway-wave.jpg" width="1200" height="750" alt="하차 파도 지도 시연 화면. 2026년 7월 20일 08:14 동대문역사문화공원 하행 승강장 3D 그림 위에 ‘큰 파도 경보 · 08:14 도착 412편성 예상 697명’이 뜨고, 왼쪽 시민 카드와 오른쪽 공사 보드가 같은 열차를 알린다." loading="lazy" decoding="async">
+            <img src="assets/shots/subway-wave.webp" srcset="assets/shots/subway-wave-600.webp 600w, assets/shots/subway-wave.webp 1200w" sizes="(max-width: 1023px) 92vw, 600px" width="1200" height="750" alt="하차 파도 지도 시연 화면. 2026년 7월 20일 08:14 동대문역사문화공원 하행 승강장 3D 그림 위에 ‘큰 파도 경보 · 08:14 도착 412편성 예상 697명’이 뜨고, 왼쪽 시민 카드와 오른쪽 공사 보드가 같은 열차를 알린다." loading="lazy" decoding="async">
           </figure>
           <div class="card__body">
             <p class="card__kicker">서울교통공사 지하철 혼잡도·안전시설 데이터 활용 공모전 · 2차 심사 진출</p>
@@ -430,7 +434,7 @@
             </div>
           </div>
           <figure class="figure">
-            <img src="assets/shots/jeju-forecast.jpg" width="1200" height="675" alt="10월 제주 내국인 일별 입도객 그래프. 9월 25일에 낸 사전 예측 선과 80% 예측구간 안팎으로 실측 점들이 놓여 있다." loading="lazy" decoding="async">
+            <img src="assets/shots/jeju-forecast.webp" srcset="assets/shots/jeju-forecast-600.webp 600w, assets/shots/jeju-forecast.webp 1200w" sizes="(max-width: 1023px) 92vw, 550px" width="1200" height="675" alt="10월 제주 내국인 일별 입도객 그래프. 9월 25일에 낸 사전 예측 선과 80% 예측구간 안팎으로 실측 점들이 놓여 있다." loading="lazy" decoding="async">
             <figcaption>9월 25일에 낸 10월 예측(선)과 실측(점). 결과보고서 그림 7.</figcaption>
           </figure>
         </article>
@@ -438,7 +442,7 @@
         <div class="grid">
           <article class="card" aria-labelledby="p-oda">
             <figure class="shot">
-              <img src="assets/shots/oda-atlas.jpg" width="1200" height="750" alt="ODA Problem-Solution Atlas MVP 화면. ‘외교·ODA 문제 신호와 한국 창업역량을 연결하는 근거 대시보드’ 제목 아래 문제 신호 지도, 분야·국가 고르기, 그리고 문제 신호·국내 역량·협력 가능성·운영 리스크·데이터 품질을 따로 매긴 점수 카드가 있다." loading="lazy" decoding="async">
+              <img src="assets/shots/oda-atlas.webp" srcset="assets/shots/oda-atlas-600.webp 600w, assets/shots/oda-atlas.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1023px) 46vw, 540px" width="1200" height="750" alt="ODA Problem-Solution Atlas MVP 화면. ‘외교·ODA 문제 신호와 한국 창업역량을 연결하는 근거 대시보드’ 제목 아래 문제 신호 지도, 분야·국가 고르기, 그리고 문제 신호·국내 역량·협력 가능성·운영 리스크·데이터 품질을 따로 매긴 점수 카드가 있다." loading="lazy" decoding="async">
             </figure>
             <div class="card__body">
               <p class="card__kicker">외교 공공데이터·AI 활용 경진대회 · 제품·서비스 부문</p>
@@ -461,7 +465,7 @@
 
           <article class="card" aria-labelledby="p-steam">
             <figure class="shot">
-              <img src="assets/shots/steam-29s.jpg" width="1200" height="750" alt="김이 서리면의 한 장면. 김이 서린 편의점 유리창에 ‘당신도 수고했어요’, ‘덕분에 다 먹고 감’, ‘을지로는 새벽 2시도 환함’ 같은 손가락 글씨가 겹쳐 있다." loading="lazy" decoding="async">
+              <img src="assets/shots/steam-29s.webp" srcset="assets/shots/steam-29s-600.webp 600w, assets/shots/steam-29s.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1023px) 46vw, 540px" width="1200" height="750" alt="김이 서리면의 한 장면. 김이 서린 편의점 유리창에 ‘당신도 수고했어요’, ‘덕분에 다 먹고 감’, ‘을지로는 새벽 2시도 환함’ 같은 손가락 글씨가 겹쳐 있다." loading="lazy" decoding="async">
             </figure>
             <div class="card__body">
               <p class="card__kicker">제12회 서울 29초영화제 · 일반부 · AI 영상</p>

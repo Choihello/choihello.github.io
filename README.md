@@ -19,8 +19,9 @@ python3 -m http.server 5190   # 그다음 http://localhost:5190 을 엽니다
 | `scripts/record-pings.mjs` | 응답 기록 쌓기. 응답 기록 목록의 서비스를 두 번씩 재서 `data/pings.json`에 한 줄 더함 (Node 18+, 의존성 없음) |
 | `data/pings.json` | 쌓아 둔 응답 기록 (최근 30일, 한 줄이 한 번) |
 | `.github/workflows/record-pings.yml` | 하루 한 번(18:23 KST) `record-pings.mjs`를 돌리고 기록을 커밋 |
-| `assets/vendor/three.module.min.js` | three.js r170 (MIT). CDN 없이 이 폴더에서 바로 불러옵니다 |
-| `assets/shots/` | 프로젝트 화면 (2026-11-08 캡처·영상 장면, 1200×750 JPEG) |
+| `assets/vendor/three-sky.min.js` | three.js r170 (MIT) 중 `sky.js`가 쓰는 것만 묶은 파일 (`scripts/build-three.sh`) |
+| `assets/fonts/` | 제목 글꼴 Hahmlet(OFL) 700·800에서 제목에 쓴 글자만 남긴 woff2 (`scripts/subset-fonts.py`) |
+| `assets/shots/` | 프로젝트 화면. `이름.webp`(1200px)와 `이름-600.webp` 두 벌 (`scripts/make-shots.py`) |
 | `assets/og.jpg` | 링크 공유 미리보기 (1200×630) |
 
 ## 어떤 프로젝트를 넣었나
@@ -45,6 +46,19 @@ node scripts/record-pings.mjs --dry       # 재기만 하고 기록은 안 바�
 - GitHub 예약 실행은 정시에 돈다는 보장이 없어서, 화면은 ‘하루에 한 번’을 약속하지 않고
   실제로 잰 횟수와 마지막으로 잰 시각을 보여 줍니다. 더 촘촘히 재려면 바깥 크론이 `workflow_dispatch`를 보내면 됩니다.
 - `data/pings.json`을 못 읽으면(파일 없음, `file://`로 열기) 막대 없이 처음 적어 둔 문구가 그대로 보입니다.
+
+## 용량을 지키려고 하는 일
+
+처음엔 사이트 전체가 약 2.1MB였고, 대부분이 화면 사진(JPEG 1.1MB)과 제목 글꼴(구글 글꼴 Hahmlet 약 440KB)이었습니다.
+
+| 고칠 때 | 다시 돌릴 것 | 필요한 것 |
+| --- | --- | --- |
+| 제목(카드·섹션·원칙 제목, 첫 화면·연락 제목)을 고치거나 더함 | `python3 scripts/subset-fonts.py` | `pip install fonttools brotli` |
+| 화면 사진을 새로 넣음 (1200px 너비로 찍기) | `python3 scripts/make-shots.py 사진.png` → `index.html`에 다른 카드처럼 `srcset`·`sizes` 적기 | `pip install pillow` |
+| `sky.js`에서 `THREE.새이름`을 씀 | `sh scripts/build-three.sh` | Node·npm |
+
+- 제목 글꼴을 다시 안 만들면 새로 들어간 글자만 대체 글꼴로 보입니다. 본문 글꼴(IBM Plex Sans KR)은 구글 글꼴이 글자 조각을 나눠 보내서 그대로 둡니다.
+- 공유 미리보기 `assets/og.jpg`는 SNS가 가장 잘 읽는 JPEG로 둡니다.
 
 ## 고칠 때
 

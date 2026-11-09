@@ -42,7 +42,7 @@ if (figure && stage && rows.length > 0 && hasWebGL()) {
 }
 
 async function init() {
-  const THREE = await import("./assets/vendor/three.module.min.js");
+  const THREE = await import("./assets/vendor/three-sky.min.js");
 
   // 색은 styles.css의 토큰을 그대로 쓴다.
   const css = getComputedStyle(document.documentElement);

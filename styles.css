@@ -1,4 +1,18 @@
 /* ───────── 토큰 ───────── */
+/* 제목 글꼴: Hahmlet(OFL)에서 제목에 쓴 글자만 잘라 둔 파일 (scripts/subset-fonts.py) */
+@font-face {
+  font-family: "Hahmlet";
+  src: url("assets/fonts/hahmlet-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hahmlet";
+  src: url("assets/fonts/hahmlet-800.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
 :root {
   --paper: #ECEAF4;      /* 라벤더빛 바탕 */
   --card: #F8F7FC;       /* 카드 */
