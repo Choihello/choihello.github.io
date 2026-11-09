@@ -25,9 +25,9 @@
   <link rel="preload" href="assets/fonts/hahmlet-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="modulepreload" href="assets/vendor/three-sky.min.js">
   <!-- styles.css·main.js·sky.js를 고치면 ?v= 뒤 값을 바꿔야 브라우저가 예전 파일을 쓰지 않아요. -->
-  <link rel="stylesheet" href="styles.css?v=20261109-8">
-  <script src="main.js?v=20261109-8" defer></script>
-  <script src="sky.js?v=20261109-8" type="module"></script>
+  <link rel="stylesheet" href="styles.css?v=20261109-9">
+  <script src="main.js?v=20261109-9" defer></script>
+  <script src="sky.js?v=20261109-9" type="module"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
@@ -57,7 +57,7 @@
           <p class="eyebrow">서울 · 창업지원 실무와 도시 데이터</p>
           <h1 class="hero__title" id="hero-title"><mark>근거</mark>를 보여 주는<br>도구를 만듭니다.</h1>
           <div class="hero__aside">
-            <p class="hero__lede">창업지원 일을 하면서 필요한 도구를 직접 만들어 왔어요. 지원사업 공고와 법령, 서울 도시 데이터 같은 공공데이터를 다루고, 화면마다 데이터 기준일을 적어 둬요.</p>
+            <p class="hero__lede">창업지원 일을 하면서 필요한 도구를 직접 만들어 왔어요. 주로 지원사업 공고와 법령, 서울 도시 데이터 같은 공공데이터를 다뤄요.</p>
             <div class="hero__actions">
               <a class="btn btn--ink" href="#services">서비스 보기</a>
               <a class="btn btn--line" href="https://github.com/Choihello" target="_blank" rel="noopener noreferrer">GitHub<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
@@ -160,7 +160,7 @@
               <li>K-Startup·기업마당 매일 수집</li>
               <li>지원기관 355곳 · 창업공간 350곳</li>
             </ul>
-            <p class="card__note">공고마다 데이터 기준일을 붙이고, 공개되지 않은 정보는 AI로 추측해 넣지 않아요. 기관 위치는 핀으로, 지원 대상 지역은 색칠한 면으로 구분해요.</p>
+            <p class="card__note">기관 위치는 핀으로, 지원 대상 지역은 색칠한 면으로 구분해 그렸어요.</p>
             <p class="stack">Next.js 16 · TypeScript · MapLibre · Python 수집기</p>
             <div class="card__foot">
               <div class="links">
@@ -186,7 +186,7 @@
               <li>센터 시설 최대 3곳 비교</li>
               <li>한국어·영어</li>
             </ul>
-            <p class="card__note">공고는 매일 아침 일곱 센터 홈페이지에서 자동으로 모으고, 못 읽은 곳이 생기면 GitHub 이슈로 알림이 와요. 층별 공간은 도면이 공개되지 않아 공개 자료를 보고 그린 개략도라서 화면에도 그렇게 적었어요. 원문에서 다시 확인하지 못한 수치는 넣지 않았어요.</p>
+            <p class="card__note">공고는 매일 아침 일곱 센터 홈페이지에서 자동으로 모으고, 못 읽은 곳이 생기면 GitHub 이슈로 알림이 와요. 층별 공간은 도면이 공개되지 않아 공개 자료를 보고 개략도로 그렸어요.</p>
             <p class="stack">Three.js r170 · JavaScript · 셀 셰이딩 · GitHub Actions · Vercel</p>
             <div class="card__foot">
               <div class="links">
@@ -260,7 +260,7 @@
             <div class="card__body">
               <p class="card__kicker">사업계획서 사전 진단</p>
               <h3 class="card__title" id="p-plan-lint">plan-lint</h3>
-              <p class="card__text">정부 창업지원사업 사업계획서를 내기 전에 올리면 빠진 항목, 분량 위반, 앞뒤가 안 맞는 수치, 근거 없는 주장을 해당 문장과 함께 알려 줘요. 점수나 합격 가능성은 매기지 않아요.</p>
+              <p class="card__text">정부 창업지원사업 사업계획서를 내기 전에 올리면 빠진 항목, 분량 위반, 앞뒤가 안 맞는 수치, 근거 없는 주장을 해당 문장과 함께 알려 줘요.</p>
               <ul class="facts">
                 <li>.hwpx · .pdf · .docx</li>
                 <li>올린 문서는 저장 안 함</li>
@@ -290,7 +290,6 @@
               <ul class="facts">
                 <li>KOSIS 2024 분포 · IPF</li>
                 <li>Wilson 90% 신뢰구간</li>
-                <li>표본이 적으면 판단 보류</li>
               </ul>
               <p class="stack">TypeScript · Node 24 · Claude API</p>
               <div class="card__foot">
@@ -455,10 +454,10 @@
             <div class="card__body">
               <p class="card__kicker">외교 공공데이터·AI 활용 경진대회 · 제품·서비스 부문</p>
               <h3 class="card__title" id="p-oda">ODA Problem-Solution Atlas</h3>
-              <p class="card__text">외교부와 KOICA 공공데이터에서 나라별·분야별 개발협력 문제를 뽑아, 한국 스타트업이 실증(PoC)해 볼 만한 것과 연결해요. 특정 나라를 추천하지는 않고, 카드마다 근거와 한계를 같이 적었어요.</p>
+              <p class="card__text">외교부와 KOICA 공공데이터에서 나라별·분야별 개발협력 문제를 뽑아, 한국 스타트업이 실증(PoC)해 볼 만한 것과 연결해요.</p>
               <ul class="facts">
                 <li>외교부·KOICA 데이터 4종 + 국내 보조 데이터</li>
-                <li>점수를 합치지 않고 다섯 갈래로 따로 표시</li>
+                <li>다섯 가지 지표를 나란히 표시</li>
                 <li>API 키 없이 도는 시드 데이터 MVP</li>
               </ul>
               <p class="stack">HTML 한 파일 MVP · 제품·서비스 기획서</p>
@@ -515,11 +514,6 @@
             <h3 class="principle__title">AI가 지어낸 근거를 걸러요</h3>
             <p class="principle__text">AI가 인용한 조문은 법령 색인과 대조해 실제로 있는지 확인해요. 사업계획서 진단기는 일부러 결함을 넣은 문서로 시험해서, 검사 항목마다 얼마나 잡고 얼마나 잘못 잡는지 재요.</p>
             <p class="principle__src">startup-law-mcp · plan-lint</p>
-          </div>
-          <div class="principle">
-            <h3 class="principle__title">모르는 건 비워 둬요</h3>
-            <p class="principle__text">공개 자료에 없는 정보는 AI로 채우지 않고, 화면마다 데이터 기준일을 적어요. 표본이 적은 집단은 결론을 내지 않고 ‘판단 보류’로 둬요.</p>
-            <p class="principle__src">founder-map · synth-persona</p>
           </div>
           <div class="principle">
             <h3 class="principle__title">비용 상한부터 정해요</h3>
