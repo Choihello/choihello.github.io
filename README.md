@@ -18,7 +18,7 @@ python3 -m http.server 5190   # 그다음 http://localhost:5190 을 엽니다
 | `sky.js` | 응답 기록 위 3D ‘응답 거리’ 그림 (three.js). 가운데서 멀수록 늦게 응답한 곳, 끌어서 돌리고 별을 누르면 소개 카드로 이동 |
 | `scripts/record-pings.mjs` | 응답 기록 쌓기. 응답 기록 목록의 서비스를 두 번씩 재서 `data/pings.json`에 한 줄 더함 (Node 18+, 의존성 없음) |
 | `data/pings.json` | 쌓아 둔 응답 기록 (최근 30일, 한 줄이 한 번) |
-| `.github/workflows/record-pings.yml` | 3시간마다 `record-pings.mjs`를 돌리고 기록을 커밋 |
+| `.github/workflows/record-pings.yml` | 하루 한 번(18:23 KST) `record-pings.mjs`를 돌리고 기록을 커밋 |
 | `assets/vendor/three.module.min.js` | three.js r170 (MIT). CDN 없이 이 폴더에서 바로 불러옵니다 |
 | `assets/shots/` | 프로젝트 화면 (2026-11-08 캡처·영상 장면, 1200×750 JPEG) |
 | `assets/og.jpg` | 링크 공유 미리보기 (1200×630) |
@@ -41,8 +41,8 @@ node scripts/record-pings.mjs --dry       # 재기만 하고 기록은 안 바�
   첫 응답이 1.5초보다 늦고 두 번째보다 1초 넘게 느리면 화면에서 ‘잠들어 있다 깨어나며 응답’(노랑)으로 표시합니다.
 - 4xx는 서버가 살아 있다는 뜻이라 응답으로 셉니다(startup-law-mcp `/mcp`는 GET에 406). 5xx와 연결 실패는 응답 없음입니다.
 - 서비스 목록은 `index.html`의 응답 기록 행(`.ping[data-url]`)에서 읽습니다. 행을 더하거나 빼면 다음 기록부터 반영됩니다.
-- `.github/workflows/record-pings.yml`이 3시간마다 재고 기록을 커밋합니다. `"src"`는 어디서 쟀는지(`gha`는 GitHub Actions)입니다.
-- GitHub 예약 실행은 정시에 돈다는 보장이 없어서, 화면은 ‘몇 시간마다’를 약속하지 않고
+- `.github/workflows/record-pings.yml`이 하루 한 번(18:23 KST) 재고 기록을 커밋합니다. `"src"`는 어디서 쟀는지(`gha`는 GitHub Actions)입니다.
+- GitHub 예약 실행은 정시에 돈다는 보장이 없어서, 화면은 ‘하루에 한 번’을 약속하지 않고
   실제로 잰 횟수와 마지막으로 잰 시각을 보여 줍니다. 더 촘촘히 재려면 바깥 크론이 `workflow_dispatch`를 보내면 됩니다.
 - `data/pings.json`을 못 읽으면(파일 없음, `file://`로 열기) 막대 없이 처음 적어 둔 문구가 그대로 보입니다.
 

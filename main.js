@@ -6,7 +6,7 @@ const TIMEOUT_MS = 12000;
 // Fly.io 서비스는 쉬면 멈췄다가 첫 요청에 깨어나서 2~3초가 걸린다.
 const WAKE_MS = 1500;
 const WAKE_GAP = 1000;
-const LOG_TICKS = 32;
+const LOG_TICKS = 30; // 하루 한 번 재고 30일 치를 남기니 한 달이 꽉 찬다
 
 function formatMs(ms) {
   return ms < 1000 ? `${ms}ms` : `${(ms / 1000).toFixed(1)}초`;
@@ -247,7 +247,7 @@ async function initHistory() {
   if (!button || !button.disabled) summary.innerHTML = historySummary(runs, stats);
   if (fine) {
     const last = runs.at(-1);
-    const scheduled = runs.some((run) => run.src === "gha") ? "GitHub에서 3시간마다 재도록 예약해 두었고, " : "";
+    const scheduled = runs.some((run) => run.src === "gha") ? "GitHub에서 하루에 한 번 재도록 예약해 두었고, " : "";
     fine.innerHTML =
       `<span class="record__key">${keyHTML("ok", "응답")} ${keyHTML("wake", "잠들어 있다 깨어나며 응답")} ${keyHTML("fail", "응답 없음")}</span>` +
       `막대 하나가 한 번 잰 기록이고, 오른쪽이 최근이에요. ${scheduled}마지막으로 잰 건 ${agoLabel(last.t)}이에요. ` +
