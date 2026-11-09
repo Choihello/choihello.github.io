@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>최광범 · Choihello — 근거를 보여 주는 도구</title>
+  <meta name="description" content="창업지원사업 공고, 법령 조문, 서울 도시 데이터를 창업지원 실무에서 바로 쓰는 웹서비스로 만드는 최광범(Choihello)의 포트폴리오. 지금 응답하는 서비스 8곳과 도구, 공모전 출품작을 모았어요.">
+  <meta name="theme-color" content="#ECEAF4">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="최광범 · Choihello — 근거를 보여 주는 도구">
+  <meta property="og:description" content="창업지원사업 공고, 법령 조문, 서울 도시 데이터를 실무에서 바로 쓰는 웹서비스로 만들어요.">
+  <meta property="og:url" content="https://choihello.github.io/">
+  <meta property="og:image" content="https://choihello.github.io/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://choihello.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+  <!-- styles.css·main.js·sky.js를 고치면 ?v= 뒤 값을 바꿔야 브라우저가 예전 파일을 쓰지 않아요. -->
+  <link rel="stylesheet" href="styles.css?v=20261109-4">
+  <script src="main.js?v=20261109-4" defer></script>
+  <script src="sky.js?v=20261109-4" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#top" aria-label="최광범 포트폴리오 맨 위로">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">최광범</span>
+        <span class="brand__handle">Choihello</span>
+      </a>
+      <nav class="site-nav" aria-label="섹션">
+        <a href="#services">서비스</a>
+        <a href="#tools">도구</a>
+        <a href="#contests">공모전</a>
+        <a href="#how">일하는 방식</a>
+        <a href="#contact">연락</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 첫 화면 -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">서울 · 창업지원 실무와 도시 데이터</p>
+          <h1 class="hero__title" id="hero-title"><mark>근거</mark>를 보여 주는<br>도구를 만듭니다.</h1>
+          <p class="hero__lede">창업지원사업 공고, 법령 조문, 서울 도시 데이터 같은 공공데이터를 창업지원 실무에서 바로 쓰는 웹서비스로 만들어요. 화면마다 데이터 기준일을 적고, 모르는 건 모른다고 표시해요.</p>
+          <div class="hero__actions">
+            <a class="btn btn--ink" href="#services">서비스 보기</a>
+            <a class="btn btn--line" href="https://github.com/Choihello" target="_blank" rel="noopener noreferrer">GitHub<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+          </div>
+        </div>
+
+        <aside class="record" aria-labelledby="record-title">
+          <div class="record__head">
+            <h2 class="record__title" id="record-title">응답 기록</h2>
+            <p class="record__when" id="record-when">2026-11-08 07:12 KST</p>
+          </div>
+          <figure class="sky" id="sky" aria-hidden="true">
+            <div class="sky__stage" data-sky-stage></div>
+            <figcaption class="sky__cap">가운데서 멀수록 늦게 응답한 곳이에요. 끌어서 돌려 보세요.</figcaption>
+          </figure>
+          <button class="record__btn" type="button" id="measure">지금 다시 재기</button>
+          <p class="record__note" id="record-summary" aria-live="polite">이 페이지를 만들 때 8곳 모두 응답했어요. 버튼을 누르면 지금 이 브라우저에서 다시 재요.</p>
+          <ol class="record__list">
+            <li class="ping" data-id="founder-map" data-ms="52" data-card="p-founder-map" data-short="founder-map" data-url="https://founder-map-kr.vercel.app/">
+              <span class="dot" aria-hidden="true"></span><span class="ping__name">founder-map</span><span class="ping__status js-status" data-state="ok">응답 52ms</span>
+            </li>
+            <li class="ping" data-id="seoul-daymap" data-ms="49" data-card="p-daymap" data-short="Seoul Daymap" data-url="https://seoul-daymap.vercel.app/">
+              <span class="dot" aria-hidden="true"></span><span class="ping__name">Seoul Daymap</span><span class="ping__status js-status" data-state="ok">응답 49ms</span>
+            </li>
+            <li class="ping" data-id="mentoring-hub" data-ms="25" data-card="p-mh" data-short="멘토링 허브" data-url="https://choihello.github.io/mentoring-hub/">
+              <span class="dot" aria-hidden="true"></span><span class="ping__name">멘토링 허브</span><span class="ping__status js-status" data-state="ok">응답 25ms</span>
+            </li>
+            <li class="ping" data-id="plan-lint" data-ms="121" data-card="p-plan-lint" data-short="plan-lint" data-url="https://plan-lint-web.fly.dev/">
+              <span class="dot" aria-hidden="true"></span><span class="ping__name">plan-lint</span><span class="ping__status js-status" data-state="ok">응답 121ms</span>
+            </li>
+            <li class="ping" data-id="synth-persona" data-ms="28" data-card="p-synth" data-short="synth-persona" data-url="https://synth-persona-app.vercel.app/">
+              <span class="dot" aria-hidden="true"></span><span class="ping__name">synth-persona</span><span class="ping__status js-status" data-state="ok">응답 28ms</span>
+            </li>
+            <li class="ping" data-id="kw-startup-universe" data-ms="36" data-card="p-kw" data-short="KW Universe" data-url="https://kw-startup-universe.vercel.app/">
+              <span class="dot" aria-hidden="true"></span><span class="ping__name">KW Startup Universe</span><span class="ping__status js-status" data-state="ok">응답 36ms</span>
+            </li>
+            <li class="ping" data-id="modu-startup" data-ms="22" data-card="p-modu" data-short="모두의 창업" data-url="https://modu-startup-kw.vercel.app/">
+              <span class="dot" aria-hidden="true"></span><span class="ping__name">모두의 창업</span><span class="ping__status js-status" data-state="ok">응답 22ms</span>
+            </li>
+            <li class="ping" data-id="startup-law-mcp" data-ms="122" data-card="p-law" data-short="startup-law-mcp" data-url="https://startup-law-mcp.fly.dev/mcp">
+              <span class="dot" aria-hidden="true"></span><span class="ping__name">startup-law-mcp</span><span class="ping__status js-status" data-state="ok">응답 122ms</span>
+            </li>
+          </ol>
+          <p class="record__fine">서버가 답을 돌려주면 ‘응답’으로 셉니다. 쉬고 있던 서버는 첫 응답이 몇 초 걸릴 수 있어요.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 서비스 -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 class="section-head__title" id="services-title">열어서 바로 쓰는 서비스</h2>
+          <p class="section-head__count">7곳</p>
+          <p class="section-head__desc">설치나 가입 없이 주소만 열면 돼요. ‘멘토링 허브’와 ‘모두의 창업’만 등록된 계정으로 들어가요.</p>
+        </header>
+
+        <article class="card card--feature" aria-labelledby="p-founder-map">
+          <figure class="shot">
+            <img src="assets/shots/founder-map.jpg" width="1200" height="750" alt="founder-map 화면. 왼쪽에 마감순 공고 목록, 오른쪽에 시도별 공고 수와 기관 수가 표시된 한국 지도가 있다." loading="lazy" decoding="async">
+            <span class="chip js-status" data-for="founder-map" data-state="ok">응답 52ms</span>
+          </figure>
+          <div class="card__body">
+            <p class="card__kicker">창업지원사업 지도</p>
+            <h3 class="card__title" id="p-founder-map">founder-map</h3>
+            <p class="card__text">지역·창업 단계·지원 분야를 고르면 지금 신청할 수 있거나 곧 열릴 창업지원사업만 지도에 남아요. 지원기관과 창업공간이 어디 있는지도 같은 지도에서 봐요.</p>
+            <ul class="facts">
+              <li>11월 7일 수집 공고 258건</li>
+              <li>K-Startup·기업마당 매일 수집</li>
+              <li>지원기관 355곳 · 창업공간 350곳</li>
+            </ul>
+            <p class="card__note">공고마다 데이터 기준일을 붙이고, 공개되지 않은 정보는 AI로 추측해 채우지 않아요. 기관 위치(핀)와 지원 대상 지역(면)은 다른 모양으로 그려 헷갈리지 않게 했어요.</p>
+            <p class="stack">Next.js 16 · TypeScript · MapLibre · Python 수집기</p>
+            <div class="card__foot">
+              <div class="links">
+                <a class="link link--go" href="https://founder-map-kr.vercel.app/" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                <span class="link link--muted">소스 비공개</span>
+              </div>
+              <p class="meta">커밋 447 · 마지막 커밋 11월 7일</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--feature card--flip" aria-labelledby="p-daymap">
+          <figure class="shot">
+            <img src="assets/shots/seoul-daymap.jpg" width="1200" height="750" alt="Seoul Daymap의 서울 별자리 일지 화면. 검은 밤하늘에 혼잡도에 따라 색이 다른 별들이 띠를 이루고, 아래에 ‘이태원을 둘러싼 9개의 별무리’라고 적혀 있다." loading="lazy" decoding="async">
+            <span class="chip js-status" data-for="seoul-daymap" data-state="ok">응답 49ms</span>
+          </figure>
+          <div class="card__body">
+            <p class="card__kicker">서울 121곳 실시간 혼잡도</p>
+            <h3 class="card__title" id="p-daymap">Seoul Daymap</h3>
+            <p class="card__text">서울 121개 구역의 지금 혼잡도와 12시간 예보, 주변 볼거리를 한 화면에서 봐요. 밤에는 사람이 모인 곳마다 별이 뜨고, 그 밤하늘이 매일 ‘별자리 일지’로 쌓여요.</p>
+            <ul class="facts">
+              <li>20분마다 수집 · 하루 72회</li>
+              <li>한국어·영어·일본어·중국어</li>
+              <li>파생 데이터 공개</li>
+            </ul>
+            <p class="card__note">GitHub 예약 실행이 132번 중 24번만 돈다는 걸 재 보고, 수집기를 Cloudflare Worker가 깨우게 바꿨어요. 원본 수집 데이터는 비공개로 두고, 공개해도 되는 파생 데이터만 daymap-data로 내보내요.</p>
+            <p class="stack">Next.js · Leaflet · pixi.js · Python · GitHub Actions · Cloudflare Workers</p>
+            <div class="card__foot">
+              <div class="links">
+                <a class="link link--go" href="https://seoul-daymap.vercel.app/ko" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                <a class="link" href="https://github.com/Choihello/daymap-data" target="_blank" rel="noopener noreferrer">공개 데이터<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                <span class="link link--muted">소스 비공개</span>
+              </div>
+              <p class="meta">커밋 499 · 마지막 커밋 11월 2일</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--feature" aria-labelledby="p-mh">
+          <figure class="shot">
+            <img src="assets/shots/mentoring-hub.jpg" width="1200" height="750" alt="멘토링 허브 로그인 화면. 초록 구슬 모양 마스코트 아래 ‘MentoringHub — 광운대학교 멘토링 관리 시스템’과 Google 계정 로그인 버튼이 있다." loading="lazy" decoding="async">
+            <span class="chip js-status" data-for="mentoring-hub" data-state="ok">응답 25ms</span>
+          </figure>
+          <div class="card__body">
+            <p class="card__kicker">멘토링 관리 시스템 · 광운대학교 NCI창업패키지사업단</p>
+            <h3 class="card__title" id="p-mh">멘토링 허브</h3>
+            <p class="card__text">사업단 창업 멘토링의 일정 조율, 일지 수합, 실적 집계를 엑셀·메일·메신저에서 웹앱 하나로 옮겼어요. 멘토가 시간을 열면 멘티가 직접 예약하고, 일지와 실적은 담당자 화면에 자동으로 모여요.</p>
+            <ul class="facts">
+              <li>같은 시간 중복 예약 차단</li>
+              <li>멘토·멘티·관리자 세 역할 · 역할별 사용설명서</li>
+              <li>빌드 없는 HTML 한 파일 + Supabase</li>
+            </ul>
+            <p class="card__note">담당자로 일하며 직접 겪던 수작업을 없애려고 만든 시스템이에요. 이걸 바탕으로 ‘모두의 창업’ 운영 플랫폼을 따로 만들었고, 멘토링 허브는 사업단 운영용으로 계속 돌아가요.</p>
+            <p class="stack">JavaScript · Supabase (PostgreSQL · Auth · Realtime · 행 단위 권한) · GitHub Pages</p>
+            <div class="card__foot">
+              <div class="links">
+                <a class="link link--go" href="https://choihello.github.io/mentoring-hub/" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창, 로그인 필요)</span></a>
+                <span class="link link--muted">소스 비공개</span>
+              </div>
+              <p class="meta">커밋 126 · 3월 시작 · 마지막 커밋 9월 8일</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="grid">
+          <article class="card" aria-labelledby="p-plan-lint">
+            <figure class="shot">
+              <img src="assets/shots/plan-lint.jpg" width="1200" height="750" alt="plan-lint 화면. ‘제출 전에, 계획서의 빈틈을 먼저 점검하세요’라는 제목 아래 파일 올리기 영역과 AI 정밀 검사 스위치가 있다." loading="lazy" decoding="async">
+              <span class="chip js-status" data-for="plan-lint" data-state="ok">응답 121ms</span>
+            </figure>
+            <div class="card__body">
+              <p class="card__kicker">사업계획서 사전 진단</p>
+              <h3 class="card__title" id="p-plan-lint">plan-lint</h3>
+              <p class="card__text">정부 창업지원사업 사업계획서를 내기 전에 올리면, 빠진 항목·분량 위반·수치 모순과 근거 없는 주장을 원문 인용과 함께 짚어 줘요. 점수나 합격 가능성은 매기지 않아요.</p>
+              <ul class="facts">
+                <li>.hwpx · .pdf · .docx</li>
+                <li>올린 문서는 저장 안 함</li>
+                <li>AI 검사 1건 약 18원</li>
+              </ul>
+              <p class="stack">Python · FastAPI · 규칙 검사 + LLM · Fly.io</p>
+              <div class="card__foot">
+                <div class="links">
+                  <a class="link link--go" href="https://plan-lint-web.fly.dev/" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                  <a class="link" href="https://github.com/Choihello/plan-lint-web" target="_blank" rel="noopener noreferrer">웹 코드<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                  <a class="link" href="https://github.com/Choihello/plan-lint" target="_blank" rel="noopener noreferrer">엔진 코드<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                </div>
+                <p class="meta">마지막 커밋 8월 1일</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="p-synth">
+            <figure class="shot">
+              <img src="assets/shots/synth-persona.jpg" width="1200" height="750" alt="synth-persona 데모 화면. ‘진짜 고객을 만나기 전, 가짜 60명에게 먼저 물어보세요’라는 제목과 예시 리포트 카드 두 장이 있다." loading="lazy" decoding="async">
+              <span class="chip js-status" data-for="synth-persona" data-state="ok">응답 28ms</span>
+            </figure>
+            <div class="card__body">
+              <p class="card__kicker">합성 패널로 시장 가설 미리 보기</p>
+              <h3 class="card__title" id="p-synth">synth-persona</h3>
+              <p class="card__text">통계청 인구 분포로 만든 가상 응답자 60명에게 질문을 던져, 진짜 설문 전에 의견이 갈리는 곳을 찾아요. 의견이 갈린 곳은 진짜 조사 예산을 쓸 곳이라는 신호예요.</p>
+              <ul class="facts">
+                <li>KOSIS 2024 분포 · IPF</li>
+                <li>Wilson 90% 신뢰구간</li>
+                <li>표본이 적으면 판단 보류</li>
+              </ul>
+              <p class="stack">TypeScript · Node 24 · Claude API</p>
+              <div class="card__foot">
+                <div class="links">
+                  <a class="link link--go" href="https://synth-persona-app.vercel.app/" target="_blank" rel="noopener noreferrer">데모 열기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                  <a class="link" href="https://github.com/Choihello/synth-persona" target="_blank" rel="noopener noreferrer">코드<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                </div>
+                <p class="meta">커밋 300 · 마지막 커밋 7월 27일</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="p-kw">
+            <figure class="shot">
+              <img src="assets/shots/kw-startup-universe.jpg" width="1200" height="750" alt="KW Startup Universe 화면. 보랏빛 우주에 떠 있는 작은 3D 행성 위에 창업지원 센터 이름표와 ‘모집 중’ 표시가 붙어 있다." loading="lazy" decoding="async">
+              <span class="chip js-status" data-for="kw-startup-universe" data-state="ok">응답 36ms</span>
+            </figure>
+            <div class="card__body">
+              <p class="card__kicker">광운대 창업 인프라 3D 지도</p>
+              <h3 class="card__title" id="p-kw">KW Startup Universe</h3>
+              <p class="card__text">광운대학교와 이어진 창업지원 센터 7곳을 작은 3D 행성 위에서 둘러봐요. 서울 시간에 맞춰 밤이 오고, 실제 날씨에 따라 비나 눈이 내려요. 모집 중인 센터에는 마감 D-day가 붙어요.</p>
+              <ul class="facts">
+                <li>센터 7곳 · 마감순 모집 보드</li>
+                <li>실시간 날씨 연동</li>
+                <li>빌드 단계 없음</li>
+              </ul>
+              <p class="stack">Three.js r170 · JavaScript · 셀 셰이딩</p>
+              <div class="card__foot">
+                <div class="links">
+                  <a class="link link--go" href="https://kw-startup-universe.vercel.app/" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                  <span class="link link--muted">소스 비공개</span>
+                </div>
+                <p class="meta">커밋 70 · 마지막 커밋 11월 7일</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="p-modu">
+            <figure class="shot">
+              <img src="assets/shots/modu-startup.jpg" width="1200" height="750" alt="모두의 창업 로그인 화면. 파란 구슬 모양 마스코트 아래 ‘모두의 창업 — 광운대학교 모두의 창업 관리 플랫폼’과 Google 계정 로그인 버튼이 있다." loading="lazy" decoding="async">
+              <span class="chip js-status" data-for="modu-startup" data-state="ok">응답 22ms</span>
+            </figure>
+            <div class="card__body">
+              <p class="card__kicker">멘토링 운영 플랫폼 · 멘토링 허브에서 갈라져 나옴</p>
+              <h3 class="card__title" id="p-modu">모두의 창업</h3>
+              <p class="card__text">멘토링 허브를 바탕으로 ‘모두의 창업’ 프로그램에 맞춰 새로 만든 운영 플랫폼이에요. 참가 신청부터 매칭, 예약, 일지, 실적까지 멘토·기업·담당자가 각자 화면에서 처리해요.</p>
+              <ul class="facts">
+                <li>사용성 테스트 11차 반영</li>
+                <li>교육 영상 10편 자동 녹화</li>
+                <li>기업·멘토 사용설명서</li>
+              </ul>
+              <p class="stack">JavaScript · Supabase (PostgreSQL · Auth · Realtime · Storage)</p>
+              <div class="card__foot">
+                <div class="links">
+                  <a class="link link--go" href="https://modu-startup-kw.vercel.app/" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창, 로그인 필요)</span></a>
+                  <span class="link link--muted">소스 비공개</span>
+                </div>
+                <p class="meta">커밋 400 · 마지막 커밋 11월 3일</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 도구 -->
+    <section class="section" id="tools" aria-labelledby="tools-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 class="section-head__title" id="tools-title">연결하거나 설치해서 쓰는 도구</h2>
+          <p class="section-head__count">2개</p>
+          <p class="section-head__desc">AI 비서에 주소를 등록하거나, 내 컴퓨터·기관 서버에 설치해서 써요.</p>
+        </header>
+
+        <div class="grid">
+          <article class="card" aria-labelledby="p-law">
+            <figure class="demo">
+              <p class="demo__q">카페 창업하는데 세액감면 받을 수 있어?</p>
+              <ol class="demo__calls" aria-label="AI 비서가 부르는 도구 순서">
+                <li><code>search_law</code></li>
+                <li><code>get_article</code></li>
+                <li><code>verify_citation</code></li>
+              </ol>
+              <p class="demo__a"><strong>조세특례제한법 제6조</strong>(창업중소기업 등에 대한 세액감면) 원문과 시행일(2026.01.01)을 근거로 답하고, 인용한 조문이 실제로 있는지 확인해요.</p>
+              <figcaption>저장소 README에 실린 사용 예</figcaption>
+            </figure>
+            <div class="card__body">
+              <p class="card__kicker">창업 법령 MCP 서버</p>
+              <h3 class="card__title" id="p-law">startup-law-mcp</h3>
+              <p class="card__text">Claude 같은 AI 비서에 주소 하나를 등록하면, 창업 관련 법령 조문과 K-Startup 공고를 원문 그대로 근거로 답해요. AI가 지어낸 조문 인용은 법령 색인과 대조해서 잡아내요.</p>
+              <ul class="facts">
+                <li>법령 50개 문서 · 조문 8,191개</li>
+                <li>원격 도구 13개</li>
+                <li>국가법령정보센터 동기화</li>
+              </ul>
+              <div class="connect">
+                <p class="connect__label" id="connect-label">연결 주소</p>
+                <div class="connect__row">
+                  <code class="connect__url" aria-labelledby="connect-label">https://startup-law-mcp.fly.dev/mcp</code>
+                  <button class="connect__btn" type="button" data-copy="https://startup-law-mcp.fly.dev/mcp">주소 복사</button>
+                </div>
+                <p class="connect__status"><span class="chip chip--inline js-status" data-for="startup-law-mcp" data-state="ok">응답 122ms</span></p>
+              </div>
+              <p class="stack">Python · MCP · Fly.io</p>
+              <div class="card__foot">
+                <div class="links">
+                  <a class="link link--go" href="https://github.com/Choihello/startup-law-mcp" target="_blank" rel="noopener noreferrer">코드와 설치 방법<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                </div>
+                <p class="meta">커밋 127 · 마지막 커밋 11월 2일</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="p-gc">
+            <figure class="shot">
+              <img src="assets/shots/grantcompass.jpg" width="1200" height="750" alt="GrantCompass Korea의 기관 검토대장 화면. 합성기업 상담 기록에 상담 단계, 담당자, 자동·유효 종합 판정, 검토 상태가 표로 나온다." loading="lazy" decoding="async">
+            </figure>
+            <div class="card__body">
+              <p class="card__kicker">근거를 남기는 지원사업 매칭</p>
+              <h3 class="card__title" id="p-gc">GrantCompass Korea</h3>
+              <p class="card__text">회사 정보를 넣으면 맞는 공공 지원사업을 찾고, 그렇게 판단한 근거가 공고문 어느 쪽 어느 부분인지까지 남겨요. 기관 담당자가 검토하고 상담 기록을 남기는 화면이 따로 있어요.</p>
+              <ul class="facts">
+                <li>K-Startup·기업마당 동기화</li>
+                <li>근거 위치: 문서 해시·쪽·절</li>
+                <li>고칠 수 없는 감사 기록</li>
+              </ul>
+              <p class="stack">Python 3.12 · SQLite · Alembic · 서버 렌더링 웹</p>
+              <div class="card__foot">
+                <div class="links">
+                  <a class="link link--go" href="https://github.com/Choihello/grantcompass-korea" target="_blank" rel="noopener noreferrer">코드와 설치 방법<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                </div>
+                <p class="meta">커밋 67 · 마지막 커밋 10월 5일 · 화면 속 데이터는 합성</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 공모전 -->
+    <section class="section" id="contests" aria-labelledby="contests-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 class="section-head__title" id="contests-title">공모전에 낸 것</h2>
+          <p class="section-head__count">4편</p>
+          <p class="section-head__desc">공공데이터 공모전 세 편과 AI 영상 한 편이에요. 심사 중인 작품은 결과가 나오면 고쳐 적어요.</p>
+        </header>
+
+        <article class="card card--feature" aria-labelledby="p-wave">
+          <figure class="shot">
+            <img src="assets/shots/subway-wave.jpg" width="1200" height="750" alt="하차 파도 지도 시연 화면. 2026년 7월 20일 08:14 동대문역사문화공원 하행 승강장 3D 그림 위에 ‘큰 파도 경보 · 08:14 도착 412편성 예상 697명’이 뜨고, 왼쪽 시민 카드와 오른쪽 공사 보드가 같은 열차를 알린다." loading="lazy" decoding="async">
+          </figure>
+          <div class="card__body">
+            <p class="card__kicker">서울교통공사 지하철 혼잡도·안전시설 데이터 활용 공모전 · 2차 심사 진출</p>
+            <h3 class="card__title" id="p-wave">하차 파도 지도</h3>
+            <p class="card__text">열차가 서면 수백 명이 한꺼번에 계단 앞으로 몰려요. 이걸 ‘하차 파도’라고 부르고, 칸별 혼잡도·안전시설·역사 도면을 합쳐 도착 전에 어느 계단과 에스컬레이터가 붐빌지 시민과 역 직원에게 알려요.</p>
+            <ul class="facts">
+              <li>4호선 28개 역 · 공개 데이터 61일치</li>
+              <li>도착 6~7분 전, 하차 상위 10% 열차의 93% 포착</li>
+              <li>열차당 오차 평균 127명 → 69명</li>
+            </ul>
+            <p class="card__note">같은 열차가 평균 4.9일마다 앞뒤를 바꿔 달려서 칸 번호가 반대쪽을 가리키는 함정이 있어요. 운행마다 방향을 판정해 정차 세 번 안에 95%를 바로잡아요. 대신 경보 열 번 중 네 번은 헛경보예요. 하차 인원은 센서 추정값이고, 센서를 단 열차는 아직 피크 운행의 33~44%예요.</p>
+            <p class="stack">서울교통공사 개방 데이터 · 3D 승강장 시연 · 열차 하중 기반 예측</p>
+            <div class="card__foot">
+              <div class="links">
+                <span class="link link--muted">시연·발표 자료는 심사 뒤 공개 검토</span>
+              </div>
+              <p class="meta">2차 자료 제출 11월 7일 · 11월 11일 발표 심사</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--study" aria-labelledby="p-jeju">
+          <div class="card__body">
+            <p class="card__kicker">2026 제주 관광 데이터 활용사례 공모전 · 데이터 분석</p>
+            <h3 class="card__title" id="p-jeju">좌석이냐 가격이냐</h3>
+            <p class="card__text">2026년 제주를 찾는 내국인 관광객이 줄어든 이유가 항공 좌석 부족인지 가격인지, 제주관광빅데이터와 항공 통계로 갈랐어요.</p>
+            <dl class="findings">
+              <div class="finding">
+                <dt>평소엔 좌석이 병목이 아니에요</dt>
+                <dd>아시아나 계열 감편을 도구변수로 쓰면 편수가 방문객에 주는 효과는 0이었어요(계수 −0.03).</dd>
+              </div>
+              <div class="finding">
+                <dt>올해 감소는 가격 쪽이에요</dt>
+                <dd>유류할증료가 전년보다 1만 원 높으면 제주행 여객이 1.5% 줄었어요.</dd>
+              </div>
+              <div class="finding">
+                <dt>미리 봉인한 예측을 채점했어요</dt>
+                <dd>9월 25일에 해시와 함께 봉인한 10월 예측은 실측과 일별 오차 7.1%였어요.</dd>
+              </div>
+            </dl>
+            <p class="stack">Python · pandas · statsmodels</p>
+            <div class="card__foot">
+              <div class="links">
+                <a class="link link--go" href="https://github.com/Choihello/jeju-seat-or-price/blob/main/docs/report.md" target="_blank" rel="noopener noreferrer">결과보고서 읽기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                <a class="link" href="https://github.com/Choihello/jeju-seat-or-price" target="_blank" rel="noopener noreferrer">코드·데이터<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+              </div>
+              <p class="meta">마지막 커밋 10월 28일</p>
+            </div>
+          </div>
+          <figure class="figure">
+            <img src="assets/shots/jeju-forecast.jpg" width="1200" height="675" alt="10월 제주 내국인 일별 입도객 그래프. 9월 25일에 낸 사전 예측 선과 80% 예측구간 안팎으로 실측 점들이 놓여 있다." loading="lazy" decoding="async">
+            <figcaption>9월 25일에 낸 10월 예측(선)과 실측(점). 결과보고서 그림 7.</figcaption>
+          </figure>
+        </article>
+
+        <div class="grid">
+          <article class="card" aria-labelledby="p-oda">
+            <figure class="shot">
+              <img src="assets/shots/oda-atlas.jpg" width="1200" height="750" alt="ODA Problem-Solution Atlas MVP 화면. ‘외교·ODA 문제 신호와 한국 창업역량을 연결하는 근거 대시보드’ 제목 아래 문제 신호 지도, 분야·국가 고르기, 그리고 문제 신호·국내 역량·협력 가능성·운영 리스크·데이터 품질을 따로 매긴 점수 카드가 있다." loading="lazy" decoding="async">
+            </figure>
+            <div class="card__body">
+              <p class="card__kicker">외교 공공데이터·AI 활용 경진대회 · 제품·서비스 부문</p>
+              <h3 class="card__title" id="p-oda">ODA Problem-Solution Atlas</h3>
+              <p class="card__text">외교부·KOICA 공공데이터에서 나라·분야별 개발협력 문제 신호를 뽑아, 한국 스타트업이 실증(PoC)을 검토할 만한 문제와 이어 줘요. 어느 나라로 가라고 추천하지 않고, 근거와 한계를 카드마다 함께 보여 줘요.</p>
+              <ul class="facts">
+                <li>외교부·KOICA 데이터 4종 + 국내 보조 데이터</li>
+                <li>점수를 합치지 않고 다섯 갈래로 따로 표시</li>
+                <li>API 키 없이 도는 시드 데이터 MVP</li>
+              </ul>
+              <p class="stack">HTML 한 파일 MVP · 제품·서비스 기획서</p>
+              <div class="card__foot">
+                <div class="links">
+                  <span class="link link--muted">소스 비공개</span>
+                </div>
+                <p class="meta">MVP 6월 27일</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="p-steam">
+            <figure class="shot">
+              <img src="assets/shots/steam-29s.jpg" width="1200" height="750" alt="김이 서리면의 한 장면. 김이 서린 편의점 유리창에 ‘당신도 수고했어요’, ‘덕분에 다 먹고 감’, ‘을지로는 새벽 2시도 환함’ 같은 손가락 글씨가 겹쳐 있다." loading="lazy" decoding="async">
+            </figure>
+            <div class="card__body">
+              <p class="card__kicker">제12회 서울 29초영화제 · 일반부 · AI 영상</p>
+              <h3 class="card__title" id="p-steam">김이 서리면</h3>
+              <p class="card__text">밤 11시, 을지로 골목 편의점 창가. 컵라면 김이 유리를 덮자 먼저 다녀간 사람들이 손가락으로 남긴 글씨가 떠올라요. 그는 다 먹고, 다음 손님에게 답장을 남겨요.</p>
+              <ul class="facts">
+                <li>본편 29초 · 전체 36초</li>
+                <li>이미지 Codex · 영상 Grok Imagine · 음악 Flow Music</li>
+                <li>손가락 끝을 프레임마다 추적해 글씨 획을 맞춤</li>
+              </ul>
+              <p class="stack">생성형 AI 영상 · ffmpeg 편집·믹스</p>
+              <div class="card__foot">
+                <div class="links">
+                  <span class="link link--muted">영상은 심사 뒤 공개</span>
+                </div>
+                <p class="meta">최종본 11월 4일</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 일하는 방식 -->
+    <section class="section section--how" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 class="section-head__title" id="how-title">일하는 방식</h2>
+          <p class="section-head__desc">위 프로젝트들에 공통으로 들어 있는 원칙이에요. 원칙마다 실제로 한 일을 붙였어요.</p>
+        </header>
+
+        <div class="principles">
+          <div class="principle">
+            <h3 class="principle__title">재 보고 나서 말해요</h3>
+            <p class="principle__text">GitHub 예약 실행이 44시간 동안 132번 중 24번만 돈 걸 재고 나서, 서울 데이터 수집기를 바깥 크론이 깨우는 방식으로 바꿨어요.</p>
+            <p class="principle__src">Seoul Daymap</p>
+          </div>
+          <div class="principle">
+            <h3 class="principle__title">AI가 지어낸 근거를 걸러요</h3>
+            <p class="principle__text">AI가 인용한 조문이 실제로 있는지 법령 색인과 대조하고, 진단기는 결함을 심은 문서로 검사 항목마다 재현율과 오탐을 재요.</p>
+            <p class="principle__src">startup-law-mcp · plan-lint</p>
+          </div>
+          <div class="principle">
+            <h3 class="principle__title">모르는 건 모른다고 표시해요</h3>
+            <p class="principle__text">공개 필드가 없는 정보는 AI로 채우지 않고 화면마다 데이터 기준일을 적어요. 표본이 적은 집단은 결론 대신 ‘판단 보류’로 남겨요.</p>
+            <p class="principle__src">founder-map · synth-persona</p>
+          </div>
+          <div class="principle">
+            <h3 class="principle__title">비용 상한부터 정해요</h3>
+            <p class="principle__text">AI 검사는 한 건에 약 18원, 하루 50건까지로 묶었어요. 수집기는 과금 단위인 1분 안에 끝나도록 실행 시간을 2.3분에서 30초로 줄였어요.</p>
+            <p class="principle__src">plan-lint · Seoul Daymap</p>
+          </div>
+        </div>
+
+        <div class="tools-used">
+          <h3 class="tools-used__title">주로 쓰는 것</h3>
+          <dl class="kit">
+            <div class="kit__row"><dt>화면</dt><dd>TypeScript · JavaScript · Next.js · Three.js · MapLibre · Leaflet · pixi.js</dd></div>
+            <div class="kit__row"><dt>서버·데이터</dt><dd>Python · FastAPI · Supabase(PostgreSQL·RLS) · SQLite · pandas · statsmodels</dd></div>
+            <div class="kit__row"><dt>자동화·배포</dt><dd>GitHub Actions · Cloudflare Workers · Vercel · Fly.io</dd></div>
+            <div class="kit__row"><dt>AI</dt><dd>MCP 서버 · Claude·OpenAI API · LLM 평가 하네스</dd></div>
+            <div class="kit__row"><dt>공공데이터</dt><dd>서울 열린데이터광장 · K-Startup · 기업마당 · 국가법령정보센터 · KOSIS · 제주관광빅데이터플랫폼</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 연락 -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact">
+        <h2 class="contact__title" id="contact-title">같이 만들 일이 있다면</h2>
+        <p class="contact__text">창업지원 실무를 도구로 바꾸는 일, 공공데이터로 서비스를 만드는 일이라면 편하게 연락 주세요.</p>
+        <ul class="contact__links">
+          <li><a class="btn btn--ink" href="https://www.threads.net/@choihellolab" target="_blank" rel="noopener noreferrer">Threads @choihellolab<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a></li>
+          <li><a class="btn btn--line" href="https://github.com/Choihello" target="_blank" rel="noopener noreferrer">GitHub @Choihello<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>© 2026 최광범 · Choihello</p>
+      <p>응답 기록과 숫자는 2026년 11월 8일에 확인한 값이에요.</p>
+    </div>
+  </footer>
+</body>
+</html>

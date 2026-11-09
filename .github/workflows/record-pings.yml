@@ -1,0 +1,47 @@
+name: record-pings
+
+# 응답 기록: 서비스 8곳을 재서 data/pings.json에 한 줄 더하고 커밋한다.
+#
+# schedule은 정해진 시각에 꼭 돈다는 보장이 없다. 다른 프로젝트에서 잰 값으로는 44시간 동안
+# 예정 132번 중 24번(18%)만 돌았다. 그래서 화면은 '몇 시간마다'가 아니라 실제로 잰 횟수와
+# 마지막으로 잰 시각을 보여 준다. 더 촘촘히 재야 하면 바깥 시계(Cloudflare Worker 크론 등)가
+# workflow_dispatch를 보내면 된다.
+on:
+  schedule:
+    - cron: "41 */3 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: record-pings
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 재기
+        run: node scripts/record-pings.mjs --src gha
+
+      - name: 기록 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/pings.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "응답 기록 $(date -u +%Y-%m-%dT%H:%MZ)"
+          # 그사이 다른 커밋이 올라왔으면 그 위에 얹는다
+          for i in 1 2 3; do
+            git pull --rebase --quiet && git push && exit 0
+            sleep 5
+          done
+          exit 1

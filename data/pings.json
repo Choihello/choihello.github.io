@@ -1,0 +1,4 @@
+{"v":1,"keepDays":30,"runs":[
+{"t":"2026-11-09T01:52:53Z","src":"mac","r":{"founder-map":[362,1161,200],"seoul-daymap":[276,430,200],"mentoring-hub":[66,341,200],"plan-lint":[70,2570,200],"synth-persona":[314,650,200],"kw-startup-universe":[236,586,200],"modu-startup":[23,79,200],"startup-law-mcp":[43,2341,406]}},
+{"t":"2026-11-09T01:53:08Z","src":"mac","r":{"founder-map":[249,335,200],"seoul-daymap":[241,333,200],"mentoring-hub":[33,42,200],"plan-lint":[79,214,200],"synth-persona":[21,64,200],"kw-startup-universe":[15,464,200],"modu-startup":[19,108,200],"startup-law-mcp":[48,204,406]}}
+]}
