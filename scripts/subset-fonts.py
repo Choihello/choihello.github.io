@@ -83,7 +83,7 @@ def fetch(url: str, dest: Path) -> Path:
 
 
 def build(source: Path, weight: int, text: str, dest: Path) -> None:
-    font = TTFont(source)
+    font = TTFont(source, recalcTimestamp=False)  # 같은 글자면 같은 파일이 나오게
     font = instancer.instantiateVariableFont(font, {"wght": weight})
     options = subset.Options()
     options.flavor = "woff2"

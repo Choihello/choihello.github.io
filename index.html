@@ -25,9 +25,9 @@
   <link rel="preload" href="assets/fonts/hahmlet-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="modulepreload" href="assets/vendor/three-sky.min.js">
   <!-- styles.css·main.js·sky.js를 고치면 ?v= 뒤 값을 바꿔야 브라우저가 예전 파일을 쓰지 않아요. -->
-  <link rel="stylesheet" href="styles.css?v=20261109-6">
-  <script src="main.js?v=20261109-6" defer></script>
-  <script src="sky.js?v=20261109-6" type="module"></script>
+  <link rel="stylesheet" href="styles.css?v=20261109-7">
+  <script src="main.js?v=20261109-7" defer></script>
+  <script src="sky.js?v=20261109-7" type="module"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
@@ -56,10 +56,12 @@
         <div class="hero__copy">
           <p class="eyebrow">서울 · 창업지원 실무와 도시 데이터</p>
           <h1 class="hero__title" id="hero-title"><mark>근거</mark>를 보여 주는<br>도구를 만듭니다.</h1>
-          <p class="hero__lede">창업지원사업 공고, 법령 조문, 서울 도시 데이터 같은 공공데이터를 창업지원 실무에서 바로 쓰는 웹서비스로 만들어요. 화면마다 데이터 기준일을 적고, 모르는 건 모른다고 표시해요.</p>
-          <div class="hero__actions">
-            <a class="btn btn--ink" href="#services">서비스 보기</a>
-            <a class="btn btn--line" href="https://github.com/Choihello" target="_blank" rel="noopener noreferrer">GitHub<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+          <div class="hero__aside">
+            <p class="hero__lede">창업지원사업 공고, 법령 조문, 서울 도시 데이터 같은 공공데이터를 창업지원 실무에서 바로 쓰는 웹서비스로 만들어요. 화면마다 데이터 기준일을 적고, 모르는 건 모른다고 표시해요.</p>
+            <div class="hero__actions">
+              <a class="btn btn--ink" href="#services">서비스 보기</a>
+              <a class="btn btn--line" href="https://github.com/Choihello" target="_blank" rel="noopener noreferrer">GitHub<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+            </div>
           </div>
         </div>
 
@@ -68,39 +70,43 @@
             <h2 class="record__title" id="record-title">응답 기록</h2>
             <p class="record__when" id="record-when">2026-11-08 07:12 KST</p>
           </div>
-          <figure class="sky" id="sky" aria-hidden="true">
-            <div class="sky__stage" data-sky-stage></div>
-            <figcaption class="sky__cap">가운데서 멀수록 늦게 응답한 곳이에요. 끌어서 돌려 보세요.</figcaption>
-          </figure>
-          <button class="record__btn" type="button" id="measure">지금 다시 재기</button>
-          <p class="record__note" id="record-summary" aria-live="polite">이 페이지를 만들 때 8곳 모두 응답했어요. 버튼을 누르면 지금 이 브라우저에서 다시 재요.</p>
-          <ol class="record__list">
-            <li class="ping" data-id="founder-map" data-ms="52" data-card="p-founder-map" data-short="founder-map" data-url="https://founder-map-kr.vercel.app/">
-              <span class="dot" aria-hidden="true"></span><span class="ping__name">founder-map</span><span class="ping__status js-status" data-state="ok">응답 52ms</span>
-            </li>
-            <li class="ping" data-id="seoul-daymap" data-ms="49" data-card="p-daymap" data-short="Seoul Daymap" data-url="https://seoul-daymap.vercel.app/">
-              <span class="dot" aria-hidden="true"></span><span class="ping__name">Seoul Daymap</span><span class="ping__status js-status" data-state="ok">응답 49ms</span>
-            </li>
-            <li class="ping" data-id="mentoring-hub" data-ms="25" data-card="p-mh" data-short="멘토링 허브" data-url="https://choihello.github.io/mentoring-hub/">
-              <span class="dot" aria-hidden="true"></span><span class="ping__name">멘토링 허브</span><span class="ping__status js-status" data-state="ok">응답 25ms</span>
-            </li>
-            <li class="ping" data-id="plan-lint" data-ms="121" data-card="p-plan-lint" data-short="plan-lint" data-url="https://plan-lint-web.fly.dev/">
-              <span class="dot" aria-hidden="true"></span><span class="ping__name">plan-lint</span><span class="ping__status js-status" data-state="ok">응답 121ms</span>
-            </li>
-            <li class="ping" data-id="synth-persona" data-ms="28" data-card="p-synth" data-short="synth-persona" data-url="https://synth-persona-app.vercel.app/">
-              <span class="dot" aria-hidden="true"></span><span class="ping__name">synth-persona</span><span class="ping__status js-status" data-state="ok">응답 28ms</span>
-            </li>
-            <li class="ping" data-id="kw-startup-universe" data-ms="36" data-card="p-kw" data-short="KW Universe" data-url="https://kw-startup-universe.vercel.app/">
-              <span class="dot" aria-hidden="true"></span><span class="ping__name">KW Startup Universe</span><span class="ping__status js-status" data-state="ok">응답 36ms</span>
-            </li>
-            <li class="ping" data-id="modu-startup" data-ms="22" data-card="p-modu" data-short="모두의 창업" data-url="https://modu-startup-kw.vercel.app/">
-              <span class="dot" aria-hidden="true"></span><span class="ping__name">모두의 창업</span><span class="ping__status js-status" data-state="ok">응답 22ms</span>
-            </li>
-            <li class="ping" data-id="startup-law-mcp" data-ms="122" data-card="p-law" data-short="startup-law-mcp" data-url="https://startup-law-mcp.fly.dev/mcp">
-              <span class="dot" aria-hidden="true"></span><span class="ping__name">startup-law-mcp</span><span class="ping__status js-status" data-state="ok">응답 122ms</span>
-            </li>
-          </ol>
-          <p class="record__fine">서버가 답을 돌려주면 ‘응답’으로 셉니다. 쉬고 있던 서버는 첫 응답이 몇 초 걸릴 수 있어요.</p>
+          <div class="record__main">
+            <figure class="sky" id="sky" aria-hidden="true">
+              <div class="sky__stage" data-sky-stage></div>
+              <figcaption class="sky__cap">가운데서 멀수록 늦게 응답한 곳이에요. 끌어서 돌려 보세요.</figcaption>
+            </figure>
+            <button class="record__btn" type="button" id="measure">지금 다시 재기</button>
+            <p class="record__note" id="record-summary" aria-live="polite">이 페이지를 만들 때 8곳 모두 응답했어요. 버튼을 누르면 지금 이 브라우저에서 다시 재요.</p>
+          </div>
+          <div class="record__side">
+            <ol class="record__list">
+              <li class="ping" data-id="modu-startup" data-ms="22" data-card="p-modu" data-short="모두의 창업" data-url="https://modu-startup-kw.vercel.app/">
+                <span class="dot" aria-hidden="true"></span><span class="ping__name">모두의 창업</span><span class="ping__status js-status" data-state="ok">응답 22ms</span>
+              </li>
+              <li class="ping" data-id="founder-map" data-ms="52" data-card="p-founder-map" data-short="founder-map" data-url="https://founder-map-kr.vercel.app/">
+                <span class="dot" aria-hidden="true"></span><span class="ping__name">founder-map</span><span class="ping__status js-status" data-state="ok">응답 52ms</span>
+              </li>
+              <li class="ping" data-id="kw-startup-universe" data-ms="36" data-card="p-kw" data-short="KW Universe" data-url="https://kw-startup-universe.vercel.app/">
+                <span class="dot" aria-hidden="true"></span><span class="ping__name">KW Startup Universe</span><span class="ping__status js-status" data-state="ok">응답 36ms</span>
+              </li>
+              <li class="ping" data-id="mentoring-hub" data-ms="25" data-card="p-mh" data-short="멘토링 허브" data-url="https://choihello.github.io/mentoring-hub/">
+                <span class="dot" aria-hidden="true"></span><span class="ping__name">멘토링 허브</span><span class="ping__status js-status" data-state="ok">응답 25ms</span>
+              </li>
+              <li class="ping" data-id="seoul-daymap" data-ms="49" data-card="p-daymap" data-short="Seoul Daymap" data-url="https://seoul-daymap.vercel.app/">
+                <span class="dot" aria-hidden="true"></span><span class="ping__name">Seoul Daymap</span><span class="ping__status js-status" data-state="ok">응답 49ms</span>
+              </li>
+              <li class="ping" data-id="plan-lint" data-ms="121" data-card="p-plan-lint" data-short="plan-lint" data-url="https://plan-lint-web.fly.dev/">
+                <span class="dot" aria-hidden="true"></span><span class="ping__name">plan-lint</span><span class="ping__status js-status" data-state="ok">응답 121ms</span>
+              </li>
+              <li class="ping" data-id="synth-persona" data-ms="28" data-card="p-synth" data-short="synth-persona" data-url="https://synth-persona-app.vercel.app/">
+                <span class="dot" aria-hidden="true"></span><span class="ping__name">synth-persona</span><span class="ping__status js-status" data-state="ok">응답 28ms</span>
+              </li>
+              <li class="ping" data-id="startup-law-mcp" data-ms="122" data-card="p-law" data-short="startup-law-mcp" data-url="https://startup-law-mcp.fly.dev/mcp">
+                <span class="dot" aria-hidden="true"></span><span class="ping__name">startup-law-mcp</span><span class="ping__status js-status" data-state="ok">응답 122ms</span>
+              </li>
+            </ol>
+            <p class="record__fine">서버가 답을 돌려주면 ‘응답’으로 셉니다. 쉬고 있던 서버는 첫 응답이 몇 초 걸릴 수 있어요.</p>
+          </div>
         </aside>
       </div>
     </section>
@@ -114,7 +120,33 @@
           <p class="section-head__desc">설치나 가입 없이 주소만 열면 돼요. ‘멘토링 허브’와 ‘모두의 창업’만 등록된 계정으로 들어가요.</p>
         </header>
 
-        <article class="card card--feature" aria-labelledby="p-founder-map">
+        <article class="card card--feature" aria-labelledby="p-modu">
+          <figure class="shot">
+            <img src="assets/shots/modu-startup.webp" srcset="assets/shots/modu-startup-600.webp 600w, assets/shots/modu-startup.webp 1200w" sizes="(max-width: 1023px) 92vw, 600px" width="1200" height="750" alt="모두의 창업 로그인 화면. 파란 구슬 모양 마스코트 아래 ‘모두의 창업 — 광운대학교 모두의 창업 관리 플랫폼’과 Google 계정 로그인 버튼이 있다." loading="lazy" decoding="async">
+            <span class="chip js-status" data-for="modu-startup" data-state="ok">응답 22ms</span>
+          </figure>
+          <div class="card__body">
+            <p class="card__kicker">멘토링 운영 플랫폼 · 광운대학교 ‘모두의 창업’</p>
+            <h3 class="card__title" id="p-modu">모두의 창업</h3>
+            <p class="card__text">멘토링 허브를 바탕으로 ‘모두의 창업’ 프로그램에 맞춰 새로 만든 운영 플랫폼이에요. 참가 신청부터 매칭, 예약, 일지, 실적까지 멘토·기업·담당자가 각자 화면에서 처리해요.</p>
+            <ul class="facts">
+              <li>사용성 테스트 11차 반영</li>
+              <li>교육 영상 10편 자동 녹화</li>
+              <li>멘토용·기업용 사용설명서</li>
+            </ul>
+            <p class="card__note">멘토링 허브의 예약·일지·실적 구조를 가져와 프로그램 참가 신청부터 받도록 넓혔어요. 일지 서식은 사용성 테스트에서 나온 불편을 칸 단위로 고쳐, 제출하면 첫 오류 칸으로 바로 데려가고 고친 칸의 오류 문구는 그 자리에서 사라지게 했어요.</p>
+            <p class="stack">JavaScript · Supabase (PostgreSQL · Auth · Realtime · Storage) · Vercel</p>
+            <div class="card__foot">
+              <div class="links">
+                <a class="link link--go" href="https://modu-startup-kw.vercel.app/" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창, 로그인 필요)</span></a>
+                <span class="link link--muted">소스 비공개</span>
+              </div>
+              <p class="meta">커밋 400 · 7월 시작 · 마지막 커밋 11월 3일</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--feature card--flip" aria-labelledby="p-founder-map">
           <figure class="shot">
             <img src="assets/shots/founder-map.webp" srcset="assets/shots/founder-map-600.webp 600w, assets/shots/founder-map.webp 1200w" sizes="(max-width: 1023px) 92vw, 600px" width="1200" height="750" alt="founder-map 화면. 왼쪽에 마감순 공고 목록, 오른쪽에 시도별 공고 수와 기관 수가 표시된 한국 지도가 있다." loading="lazy" decoding="async">
             <span class="chip js-status" data-for="founder-map" data-state="ok">응답 52ms</span>
@@ -140,7 +172,59 @@
           </div>
         </article>
 
-        <article class="card card--feature card--flip" aria-labelledby="p-daymap">
+        <article class="card card--feature" aria-labelledby="p-kw">
+          <figure class="shot">
+            <img src="assets/shots/kw-startup-universe.webp" srcset="assets/shots/kw-startup-universe-600.webp 600w, assets/shots/kw-startup-universe.webp 1200w" sizes="(max-width: 1023px) 92vw, 600px" width="1200" height="750" alt="KW Startup Universe 화면. 보랏빛 우주에 떠 있는 작은 3D 행성 위에 창업지원 센터 이름표와 ‘모집 중’ 표시가 붙어 있다." loading="lazy" decoding="async">
+            <span class="chip js-status" data-for="kw-startup-universe" data-state="ok">응답 36ms</span>
+          </figure>
+          <div class="card__body">
+            <p class="card__kicker">광운대 창업 인프라 3D 지도</p>
+            <h3 class="card__title" id="p-kw">KW Startup Universe</h3>
+            <p class="card__text">광운대학교와 이어진 창업지원 센터 7곳을 작은 3D 행성 위에서 둘러봐요. 서울 시간에 맞춰 밤이 오고, 실제 날씨에 따라 비나 눈이 내려요. 모집 중인 센터에는 마감 D-day가 붙어요.</p>
+            <ul class="facts">
+              <li>센터 7곳 · 공고 매일 자동 수집</li>
+              <li>센터 시설 최대 3곳 비교</li>
+              <li>한국어·영어</li>
+            </ul>
+            <p class="card__note">공고는 GitHub Actions가 매일 아침 일곱 센터 홈페이지에서 모아 오고, 읽지 못한 센터가 생기면 GitHub 이슈로 알려요. 센터들이 도면을 공개하지 않아 층별 공간은 공개 자료로 그린 개략도라고 화면에 밝히고, 원문에서 다시 확인하지 못한 수치는 띄우지 않아요.</p>
+            <p class="stack">Three.js r170 · JavaScript · 셀 셰이딩 · GitHub Actions · Vercel</p>
+            <div class="card__foot">
+              <div class="links">
+                <a class="link link--go" href="https://kw-startup-universe.vercel.app/" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
+                <span class="link link--muted">소스 비공개</span>
+              </div>
+              <p class="meta">커밋 72 · 9월 시작 · 마지막 작업 11월 3일</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--feature card--flip" aria-labelledby="p-mh">
+          <figure class="shot">
+            <img src="assets/shots/mentoring-hub.webp" srcset="assets/shots/mentoring-hub-600.webp 600w, assets/shots/mentoring-hub.webp 1200w" sizes="(max-width: 1023px) 92vw, 600px" width="1200" height="750" alt="멘토링 허브 로그인 화면. 초록 구슬 모양 마스코트 아래 ‘MentoringHub — 광운대학교 멘토링 관리 시스템’과 Google 계정 로그인 버튼이 있다." loading="lazy" decoding="async">
+            <span class="chip js-status" data-for="mentoring-hub" data-state="ok">응답 25ms</span>
+          </figure>
+          <div class="card__body">
+            <p class="card__kicker">멘토링 관리 시스템 · 광운대학교 NCI창업패키지사업단</p>
+            <h3 class="card__title" id="p-mh">멘토링 허브</h3>
+            <p class="card__text">사업단 창업 멘토링의 일정 조율, 일지 수합, 실적 집계를 엑셀·메일·메신저에서 웹앱 하나로 옮겼어요. 멘토가 시간을 열면 멘티가 직접 예약하고, 일지와 실적은 담당자 화면에 자동으로 모여요.</p>
+            <ul class="facts">
+              <li>같은 시간 중복 예약 차단</li>
+              <li>멘토·멘티·관리자 세 역할 · 역할별 사용설명서</li>
+              <li>빌드 없는 HTML 한 파일 + Supabase</li>
+            </ul>
+            <p class="card__note">담당자로 일하며 직접 겪던 수작업을 없애려고 만든 시스템이에요. 이걸 바탕으로 ‘모두의 창업’ 운영 플랫폼을 따로 만들었고, 멘토링 허브는 사업단 운영용으로 계속 돌아가요.</p>
+            <p class="stack">JavaScript · Supabase (PostgreSQL · Auth · Realtime · 행 단위 권한) · GitHub Pages</p>
+            <div class="card__foot">
+              <div class="links">
+                <a class="link link--go" href="https://choihello.github.io/mentoring-hub/" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창, 로그인 필요)</span></a>
+                <span class="link link--muted">소스 비공개</span>
+              </div>
+              <p class="meta">커밋 126 · 3월 시작 · 마지막 커밋 9월 8일</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--feature" aria-labelledby="p-daymap">
           <figure class="shot">
             <img src="assets/shots/seoul-daymap.webp" srcset="assets/shots/seoul-daymap-600.webp 600w, assets/shots/seoul-daymap.webp 1200w" sizes="(max-width: 1023px) 92vw, 600px" width="1200" height="750" alt="Seoul Daymap의 서울 별자리 일지 화면. 검은 밤하늘에 혼잡도에 따라 색이 다른 별들이 띠를 이루고, 아래에 ‘이태원을 둘러싼 9개의 별무리’라고 적혀 있다." loading="lazy" decoding="async">
             <span class="chip js-status" data-for="seoul-daymap" data-state="ok">응답 49ms</span>
@@ -163,32 +247,6 @@
                 <span class="link link--muted">소스 비공개</span>
               </div>
               <p class="meta">커밋 499 · 마지막 커밋 11월 2일</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card--feature" aria-labelledby="p-mh">
-          <figure class="shot">
-            <img src="assets/shots/mentoring-hub.webp" srcset="assets/shots/mentoring-hub-600.webp 600w, assets/shots/mentoring-hub.webp 1200w" sizes="(max-width: 1023px) 92vw, 600px" width="1200" height="750" alt="멘토링 허브 로그인 화면. 초록 구슬 모양 마스코트 아래 ‘MentoringHub — 광운대학교 멘토링 관리 시스템’과 Google 계정 로그인 버튼이 있다." loading="lazy" decoding="async">
-            <span class="chip js-status" data-for="mentoring-hub" data-state="ok">응답 25ms</span>
-          </figure>
-          <div class="card__body">
-            <p class="card__kicker">멘토링 관리 시스템 · 광운대학교 NCI창업패키지사업단</p>
-            <h3 class="card__title" id="p-mh">멘토링 허브</h3>
-            <p class="card__text">사업단 창업 멘토링의 일정 조율, 일지 수합, 실적 집계를 엑셀·메일·메신저에서 웹앱 하나로 옮겼어요. 멘토가 시간을 열면 멘티가 직접 예약하고, 일지와 실적은 담당자 화면에 자동으로 모여요.</p>
-            <ul class="facts">
-              <li>같은 시간 중복 예약 차단</li>
-              <li>멘토·멘티·관리자 세 역할 · 역할별 사용설명서</li>
-              <li>빌드 없는 HTML 한 파일 + Supabase</li>
-            </ul>
-            <p class="card__note">담당자로 일하며 직접 겪던 수작업을 없애려고 만든 시스템이에요. 이걸 바탕으로 ‘모두의 창업’ 운영 플랫폼을 따로 만들었고, 멘토링 허브는 사업단 운영용으로 계속 돌아가요.</p>
-            <p class="stack">JavaScript · Supabase (PostgreSQL · Auth · Realtime · 행 단위 권한) · GitHub Pages</p>
-            <div class="card__foot">
-              <div class="links">
-                <a class="link link--go" href="https://choihello.github.io/mentoring-hub/" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창, 로그인 필요)</span></a>
-                <span class="link link--muted">소스 비공개</span>
-              </div>
-              <p class="meta">커밋 126 · 3월 시작 · 마지막 커밋 9월 8일</p>
             </div>
           </div>
         </article>
@@ -241,56 +299,6 @@
                   <a class="link" href="https://github.com/Choihello/synth-persona" target="_blank" rel="noopener noreferrer">코드<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
                 </div>
                 <p class="meta">커밋 300 · 마지막 커밋 7월 27일</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" aria-labelledby="p-kw">
-            <figure class="shot">
-              <img src="assets/shots/kw-startup-universe.webp" srcset="assets/shots/kw-startup-universe-600.webp 600w, assets/shots/kw-startup-universe.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1023px) 46vw, 540px" width="1200" height="750" alt="KW Startup Universe 화면. 보랏빛 우주에 떠 있는 작은 3D 행성 위에 창업지원 센터 이름표와 ‘모집 중’ 표시가 붙어 있다." loading="lazy" decoding="async">
-              <span class="chip js-status" data-for="kw-startup-universe" data-state="ok">응답 36ms</span>
-            </figure>
-            <div class="card__body">
-              <p class="card__kicker">광운대 창업 인프라 3D 지도</p>
-              <h3 class="card__title" id="p-kw">KW Startup Universe</h3>
-              <p class="card__text">광운대학교와 이어진 창업지원 센터 7곳을 작은 3D 행성 위에서 둘러봐요. 서울 시간에 맞춰 밤이 오고, 실제 날씨에 따라 비나 눈이 내려요. 모집 중인 센터에는 마감 D-day가 붙어요.</p>
-              <ul class="facts">
-                <li>센터 7곳 · 마감순 모집 보드</li>
-                <li>실시간 날씨 연동</li>
-                <li>빌드 단계 없음</li>
-              </ul>
-              <p class="stack">Three.js r170 · JavaScript · 셀 셰이딩</p>
-              <div class="card__foot">
-                <div class="links">
-                  <a class="link link--go" href="https://kw-startup-universe.vercel.app/" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창)</span></a>
-                  <span class="link link--muted">소스 비공개</span>
-                </div>
-                <p class="meta">커밋 70 · 마지막 커밋 11월 7일</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" aria-labelledby="p-modu">
-            <figure class="shot">
-              <img src="assets/shots/modu-startup.webp" srcset="assets/shots/modu-startup-600.webp 600w, assets/shots/modu-startup.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1023px) 46vw, 540px" width="1200" height="750" alt="모두의 창업 로그인 화면. 파란 구슬 모양 마스코트 아래 ‘모두의 창업 — 광운대학교 모두의 창업 관리 플랫폼’과 Google 계정 로그인 버튼이 있다." loading="lazy" decoding="async">
-              <span class="chip js-status" data-for="modu-startup" data-state="ok">응답 22ms</span>
-            </figure>
-            <div class="card__body">
-              <p class="card__kicker">멘토링 운영 플랫폼 · 멘토링 허브에서 갈라져 나옴</p>
-              <h3 class="card__title" id="p-modu">모두의 창업</h3>
-              <p class="card__text">멘토링 허브를 바탕으로 ‘모두의 창업’ 프로그램에 맞춰 새로 만든 운영 플랫폼이에요. 참가 신청부터 매칭, 예약, 일지, 실적까지 멘토·기업·담당자가 각자 화면에서 처리해요.</p>
-              <ul class="facts">
-                <li>사용성 테스트 11차 반영</li>
-                <li>교육 영상 10편 자동 녹화</li>
-                <li>기업·멘토 사용설명서</li>
-              </ul>
-              <p class="stack">JavaScript · Supabase (PostgreSQL · Auth · Realtime · Storage)</p>
-              <div class="card__foot">
-                <div class="links">
-                  <a class="link link--go" href="https://modu-startup-kw.vercel.app/" target="_blank" rel="noopener noreferrer">열어 보기<span class="ext" aria-hidden="true">↗</span><span class="sr-only">(새 창, 로그인 필요)</span></a>
-                  <span class="link link--muted">소스 비공개</span>
-                </div>
-                <p class="meta">커밋 400 · 마지막 커밋 11월 3일</p>
               </div>
             </div>
           </article>

@@ -136,13 +136,12 @@ a { color: inherit; }
 /* ───────── 첫 화면 ───────── */
 .hero { padding-block: clamp(40px, 7vw, 96px) var(--section-gap); }
 
+/* 첫 화면: 소개 글 아래에 응답 기록을 가로로 넓게 둔다 (넓은 화면 배치는 맨 아래 @media) */
 .hero__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: clamp(40px, 6vw, 80px);
-  align-items: start; /* 응답 기록 패널이 길어서, 가운데 맞춤이면 제목 위가 비어 보인다 */
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 56px);
 }
-.hero__copy { padding-top: clamp(0px, 4vw, 56px); }
 
 .eyebrow {
   font-family: var(--font-body);
@@ -312,7 +311,11 @@ a { color: inherit; }
   min-height: 3.2em;
 }
 
-.record__list { margin-top: 18px; border-top: 1px solid var(--night-line); }
+.record__list {
+  margin-top: 18px;
+  border-top: 1px solid var(--night-line);
+  container-type: inline-size; /* 목록 너비에 따라 기록 막대를 같은 줄/아래 줄에 둔다 */
+}
 
 .ping {
   display: grid;
@@ -379,6 +382,19 @@ a { color: inherit; }
 /* 응답 없음은 색만이 아니라 길이로도 구분되게 위아래로 길게 */
 .ping__log i[data-k="fail"], .log-key[data-k="fail"] { height: 13px; background: var(--fail-bright); opacity: 1; }
 .ping__log i[data-k="none"] { height: 2px; background: var(--night-muted); opacity: 0.35; }
+/* 목록이 넉넉하면 막대를 이름과 같은 줄에 둔다 (좁으면 막대를 가늘게) */
+@container (min-width: 380px) and (max-width: 459px) {
+  .ping__log { gap: 1.5px; }
+  .ping__log i { width: 2px; }
+}
+@container (min-width: 380px) {
+  .record__list.has-log .ping {
+    grid-template-areas: "dot name log status";
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+  }
+  /* 응답 시간 칸 너비를 맞춰 줄마다 막대가 같은 세로줄에 서게 한다 */
+  .record__list.has-log .ping__status { min-width: 5.6em; text-align: right; }
+}
 .ping.is-hot .ping__log i[data-k="ok"] { opacity: 0.85; }
 .log-key {
   display: inline-block;
@@ -845,3 +861,36 @@ a { color: inherit; }
 .nobr { white-space: nowrap; }
 .record__key { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-bottom: 6px; color: var(--night-text); }
 .record__key .log-key { margin-left: 0; }
+
+/* ───────── 넓은 화면: 첫 화면 배치 ─────────
+   제목 | 소개 글을 한 줄에 두고, 그 아래 응답 기록을 가로로 넓게 펼친다.
+   응답 기록 안은 왼쪽 3D 그림·버튼·요약, 오른쪽 서비스 목록. */
+@media (min-width: 1024px) {
+  .hero { padding-top: clamp(24px, 3vw, 40px); }
+  .hero__grid { gap: 40px; }
+  .hero__copy {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-areas: "eyebrow eyebrow" "title aside";
+    column-gap: clamp(32px, 4vw, 64px);
+    align-items: end;
+  }
+  .hero__copy .eyebrow { grid-area: eyebrow; }
+  .hero__title { grid-area: title; }
+  .hero__aside { grid-area: aside; padding-bottom: 0.4em; }
+  .hero__lede { margin-top: 0; }
+  .hero__actions { margin-top: 24px; }
+
+  .record {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    grid-template-areas: "head head" "main side";
+    column-gap: clamp(28px, 3.5vw, 48px);
+    align-items: start;
+  }
+  .record__head { grid-area: head; }
+  .record__main { grid-area: main; }
+  .record__side { grid-area: side; }
+  .sky { margin-right: 0; } /* 하늘은 왼쪽 가장자리까지만 넓힌다 */
+  .record__side .record__list { margin-top: 6px; }
+}
