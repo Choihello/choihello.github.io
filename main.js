@@ -116,7 +116,7 @@ function initRecord() {
         : `방금 이 브라우저에서 쟀어요. ${rows.length}곳 중 ${okCount}곳이 응답했어요. 응답 없는 곳은 잠시 뒤 다시 재 보세요.`;
     if (woke.length) {
       const list = woke.map((w) => `${nobr(w.name)} 첫 응답 ${w.first == null ? "없음" : formatMs(w.first)}`).join(", ");
-      text += ` 잠들어 있던 서버가 있어서 한 번 더 쟀어요(${list}). 목록의 시간은 깨어난 뒤 잰 값이에요.`;
+      text += ` 잠들어 있던 서버는 깨운 뒤 한 번 더 쟀어요(${list}). 목록에는 두 번째 값을 적었어요.`;
     }
     summary.innerHTML = text;
     button.disabled = false;
@@ -247,11 +247,11 @@ async function initHistory() {
   if (!button || !button.disabled) summary.innerHTML = historySummary(runs, stats);
   if (fine) {
     const last = runs.at(-1);
-    const scheduled = runs.some((run) => run.src === "gha") ? "GitHub에서 하루에 한 번 재도록 예약해 두었고, " : "";
+    const scheduled = runs.some((run) => run.src === "gha") ? "GitHub이 하루 한 번 재고, " : "";
     fine.innerHTML =
-      `<span class="record__key">${keyHTML("ok", "응답")} ${keyHTML("wake", "잠들어 있다 깨어나며 응답")} ${keyHTML("fail", "응답 없음")}</span>` +
-      `막대 하나가 한 번 잰 기록이고, 오른쪽이 최근이에요. ${scheduled}마지막으로 잰 건 ${agoLabel(last.t)}이에요. ` +
-      `서버가 답을 돌려주면 <span class="nobr">‘응답’으로</span> 세는데, 쌓아 둔 기록에서는 5xx 오류는 응답 없음으로 셉니다.`;
+      `<span class="record__key">${keyHTML("ok", "응답")} ${keyHTML("wake", "깨어나며 응답")} ${keyHTML("fail", "응답 없음")}</span>` +
+      `막대 하나가 한 번 잰 기록이에요(오른쪽이 최근). ${scheduled}마지막으로 잰 건 ${agoLabel(last.t)}이에요. ` +
+      `서버가 무엇이든 답하면 응답으로 치지만, 이 기록에서는 5xx 오류를 응답 없음으로 봐요.`;
   }
 }
 
